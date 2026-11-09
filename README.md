@@ -146,7 +146,7 @@ AMAS-FARM-Management-System/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/AMAS-FARM-Management-System.git
+git clone https://github.com/tajirdev/AMAS-FARM-Management-System.git
 cd AMAS-FARM-Management-System
 ```
 
@@ -217,4 +217,4 @@ Released under the MIT License. See [LICENSE](LICENSE) for details. The frontend
 
 More detailed documentation will be added as the project develops.
 
-===THIS README WAS DURING DEVELOPMENT WERE GOING TO CHANGE IY SOON ===
+===THIS README WAS DURING DEVELOPMENT WERE GOING TO CHANGE IT SOON ===
