@@ -6,6 +6,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from app.api.v1.assets.models.asset import Asset
 from app.shared.pagination import PaginationParams
+from app.api.v1.assets.models.asset import AssetDistribution
 
 class AssetRepo:
     @staticmethod
@@ -84,7 +85,7 @@ class AssetRepo:
 
 
     @staticmethod
-    async def create_distribution(db: AsyncSession, distribution: "AssetDistribution") -> "AssetDistribution":
+    async def create_distribution(db: AsyncSession, distribution: AssetDistribution) -> "AssetDistribution":
         db.add(distribution)
         await db.commit()
         await db.refresh(distribution)
@@ -101,7 +102,7 @@ class AssetRepo:
         try:
             await db.delete(asset)
             await db.commit()
-            await db.refresh(asset)
+ 
         except IntegrityError:
             await db.rollback()
             raise HTTPException(
